@@ -5,9 +5,12 @@
 - privacy 
 - can set own time and block.
 
-`At least create 3 nodes or create odd number of nodes.`
+`Note: "At least create 3 nodes or create odd number of nodes."`
 
+## Prerequisite:
 - `install geth`
+- metamask
+
 ## Create node 1 and node 2:
 `node1/`
 `>> geth --datadir "./data" account new`
@@ -18,7 +21,8 @@
 ## Genesis Block Setup:
 `>> puppeth`
 
-Clique - proof-of-authority
+`Clique : proof-of-authority`
+
 - admin has to authorise one node for trasactions. 
 - all the blocks will be mined from node1. 
 - but node2 part of network but won't mine any blocks. 
@@ -39,3 +43,10 @@ run this command within 2 nodes.
 - the enode is passed to node1 and node2.This will allow other peers to connect to the network.
 ## Connect all the Nodes:
 - `bootnode -nodekey "./boot.key" -verbosity 7 -addr "127.0.0.1:30301"`
+- `node1/`: `geth --networkid 14333 --datadir "./data" --bootnodes [bootnode enode] --port 30303 --ipcdisable --syncmode full --http --allow-insecure-unlock --http.corsdomain "*" --http.port 8545 --unlock [public address node1] --password password.txt --mine console`
+- `node2/`: `geth --networkid 14333 --datadir "./data" --bootnodes [bootnode enode] --port 30304 --ipcdisable --syncmode full -http --allow-insecure-unlock --http.corsdomain "*" --http.port 8546 --unlock [public address node2] --password password.txt console`
+
+## Deploy Smart Contract:
+- run bootnode, then node1(network will be up and running), then run node2(which doesn't).
+-  create network in metamask 
+-  then run a smart contact in newly created pvt network.
