@@ -1,6 +1,7 @@
-# Learn Private Geth PoA Ethereum Network
+# Learn Private Geth PoA Ethereum Network:
+
 `Note: "Should use virtual machine form AWS or Azure or any other Cloud Service provider."`
-- Can also run it on local machines for testing pourposes.
+- Can also run it on local machines for testing purposes.
 
 ## why build pvt blockchain?
 - privacy 
@@ -20,14 +21,17 @@
 `>> geth --datadir "./data" account new`
 
 ## Genesis Block Setup:
-`>> puppeth`
+
+Useful URL:[https://geth.ethereum.org/docs/interface/private-network]
+
+`>> puppeth` 
 
 `Clique : proof-of-authority` : Because we are building Pvt blockchain network.
 
 - admin has to authorise one node for trasactions. 
 - all the blocks will be mined from node1. 
 - but node2 part of network but won't mine any blocks. 
-chain id : give random number
+- `chain id` : give random number
 
 - export genesis config(blockpoc.json): of `blockpoc` network  
 
