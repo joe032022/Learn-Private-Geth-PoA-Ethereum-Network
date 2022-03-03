@@ -1,5 +1,6 @@
 # Learn Private Geth PoA Ethereum Network
-- Should use virtual machine form AWS or Azure or any other Cloud Service provider.
+`Note: "Should use virtual machine form AWS or Azure or any other Cloud Service provider."`
+- Can also run it on local machines for testing pourposes.
 
 ## why build pvt blockchain?
 - privacy 
@@ -9,7 +10,7 @@
 
 ## Prerequisite:
 - `install geth`
-- metamask
+-  metamask
 
 ## Create node 1 and node 2:
 `node1/`
@@ -21,7 +22,7 @@
 ## Genesis Block Setup:
 `>> puppeth`
 
-`Clique : proof-of-authority`
+`Clique : proof-of-authority` : Because we are building Pvt blockchain network.
 
 - admin has to authorise one node for trasactions. 
 - all the blocks will be mined from node1. 
