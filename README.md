@@ -14,10 +14,10 @@
 -  metamask
 
 ## Create node 1 and node 2:
-`node1/`
+`node1/`:
 `>> geth --datadir "./data" account new`
 
-`node2/`
+`node2/`:
 `>> geth --datadir "./data" account new`
 
 ## Genesis Block Setup:
